@@ -1,0 +1,1 @@
+../../../MWPhotoBrowser/PodSourceFiles/Classes/MWPhotoBrowserPrivate.h

@@ -14,6 +14,8 @@
 		CE6C18D62239413B0043AB35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6C18D42239413B0043AB35 /* LaunchScreen.storyboard */; };
 		CE6C18D92239413B0043AB35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C18D82239413B0043AB35 /* main.m */; };
 		CE6C18E32239413B0043AB35 /* MWPhotoBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C18E22239413B0043AB35 /* MWPhotoBrowserTests.m */; };
+		E82CC136126769ACB0A00C3F /* libPods-MWPhotoBrowserTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 389DF899424B3CB51872A755 /* libPods-MWPhotoBrowserTests.a */; };
+		F6FCE40657C058AB71529A95 /* libPods-MWPhotoBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 264EA5FDAF8718DACDC8EB68 /* libPods-MWPhotoBrowser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		264EA5FDAF8718DACDC8EB68 /* libPods-MWPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MWPhotoBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		389DF899424B3CB51872A755 /* libPods-MWPhotoBrowserTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MWPhotoBrowserTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EA59272ACE13BAAA55D492 /* Pods-MWPhotoBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWPhotoBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-MWPhotoBrowser/Pods-MWPhotoBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		79C4150F1EBD1AD7972D7038 /* Pods-MWPhotoBrowserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWPhotoBrowserTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MWPhotoBrowserTests/Pods-MWPhotoBrowserTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF97303F27438F27C97221CB /* Pods-MWPhotoBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWPhotoBrowserTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MWPhotoBrowserTests/Pods-MWPhotoBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6C18C6223941360043AB35 /* MWPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C18C9223941360043AB35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE6C18CA223941360043AB35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		CE6C18DE2239413B0043AB35 /* MWPhotoBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWPhotoBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C18E22239413B0043AB35 /* MWPhotoBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWPhotoBrowserTests.m; sourceTree = "<group>"; };
 		CE6C18E42239413B0043AB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE179C80DE94EE944EF4B5A4 /* Pods-MWPhotoBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MWPhotoBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MWPhotoBrowser/Pods-MWPhotoBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FCE40657C058AB71529A95 /* libPods-MWPhotoBrowser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82CC136126769ACB0A00C3F /* libPods-MWPhotoBrowserTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DEE79263D09525051589D99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE179C80DE94EE944EF4B5A4 /* Pods-MWPhotoBrowser.debug.xcconfig */,
+				64EA59272ACE13BAAA55D492 /* Pods-MWPhotoBrowser.release.xcconfig */,
+				BF97303F27438F27C97221CB /* Pods-MWPhotoBrowserTests.debug.xcconfig */,
+				79C4150F1EBD1AD7972D7038 /* Pods-MWPhotoBrowserTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC4E74E036B595515DB029A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				264EA5FDAF8718DACDC8EB68 /* libPods-MWPhotoBrowser.a */,
+				389DF899424B3CB51872A755 /* libPods-MWPhotoBrowserTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE6C18BD223941360043AB35 = {
 			isa = PBXGroup;
 			children = (
 				CE6C18C8223941360043AB35 /* MWPhotoBrowser */,
 				CE6C18E12239413B0043AB35 /* MWPhotoBrowserTests */,
 				CE6C18C7223941360043AB35 /* Products */,
+				6DEE79263D09525051589D99 /* Pods */,
+				AC4E74E036B595515DB029A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6C18E72239413B0043AB35 /* Build configuration list for PBXNativeTarget "MWPhotoBrowser" */;
 			buildPhases = (
+				8B234CAEA8CA7E64DA81DEAC /* [CP] Check Pods Manifest.lock */,
 				CE6C18C2223941360043AB35 /* Sources */,
 				CE6C18C3223941360043AB35 /* Frameworks */,
 				CE6C18C4223941360043AB35 /* Resources */,
+				2B51F805CF2FC7B5039684E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE6C18EA2239413B0043AB35 /* Build configuration list for PBXNativeTarget "MWPhotoBrowserTests" */;
 			buildPhases = (
+				3F111F7B5797C64BB96343AE /* [CP] Check Pods Manifest.lock */,
 				CE6C18DA2239413B0043AB35 /* Sources */,
 				CE6C18DB2239413B0043AB35 /* Frameworks */,
 				CE6C18DC2239413B0043AB35 /* Resources */,
@@ -197,6 +232,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B51F805CF2FC7B5039684E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser/Pods-MWPhotoBrowser-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MWPhotoBrowser/Pods-MWPhotoBrowser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F111F7B5797C64BB96343AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MWPhotoBrowserTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B234CAEA8CA7E64DA81DEAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MWPhotoBrowser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6C18C2223941360043AB35 /* Sources */ = {
@@ -361,6 +453,7 @@
 		};
 		CE6C18E82239413B0043AB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE179C80DE94EE944EF4B5A4 /* Pods-MWPhotoBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -381,6 +474,7 @@
 		};
 		CE6C18E92239413B0043AB35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64EA59272ACE13BAAA55D492 /* Pods-MWPhotoBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -401,6 +495,7 @@
 		};
 		CE6C18EB2239413B0043AB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF97303F27438F27C97221CB /* Pods-MWPhotoBrowserTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +515,7 @@
 		};
 		CE6C18EC2239413B0043AB35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C4150F1EBD1AD7972D7038 /* Pods-MWPhotoBrowserTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
