@@ -6,7 +6,6 @@
 //  Copyright 2010 d3i. All rights reserved.
 //
 
-#import <SDWebImage/SDWebImageDecoder.h>
 #import <SDWebImage/SDWebImageManager.h>
 #import <SDWebImage/SDWebImageOperation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
@@ -225,7 +224,7 @@
                                                    if (error) {
                                                        MWLog(@"SDWebImage failed to download image: %@", error);
                                                    }
-                                                   _webImageOperation = nil;
+                                                   self->_webImageOperation = nil;
                                                    self.underlyingImage = image;
                                                    dispatch_async(dispatch_get_main_queue(), ^{
                                                        [self imageLoadingComplete];
@@ -262,7 +261,7 @@
         @autoreleasepool {
             @try {
                 self.underlyingImage = [UIImage imageWithContentsOfFile:url.path];
-                if (!_underlyingImage) {
+                if (!self->_underlyingImage) {
                     MWLog(@"Error loading photo from path: %@", url.path);
                 }
             } @finally {

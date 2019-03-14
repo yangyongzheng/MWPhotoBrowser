@@ -1,0 +1,1 @@
+../../../../../PodSourceFiles/Classes/MWTapDetectingView.h

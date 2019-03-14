@@ -1,0 +1,1 @@
+../../../../../PodSourceFiles/Classes/UIImage+MWPhotoBrowser.h

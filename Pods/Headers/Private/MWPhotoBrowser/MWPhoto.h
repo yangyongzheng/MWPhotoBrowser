@@ -1,1 +1,0 @@
-../../../MWPhotoBrowser/PodSourceFiles/Classes/MWPhoto.h
