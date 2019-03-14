@@ -1,8 +1,8 @@
 platform :ios, '8.0'
 
 target 'MWPhotoBrowser' do
-  # pod 'MWPhotoBrowser', :git => 'https://github.com/yangyongzheng/MWPhotoBrowser.git'
-  pod 'MWPhotoBrowser', :path => '../'
+#  pod 'MWPhotoBrowser', :git => 'https://github.com/yangyongzheng/MWPhotoBrowser.git'
+   pod 'MWPhotoBrowser', :path => '../'
 
   target 'MWPhotoBrowserTests' do
     inherit! :search_paths
