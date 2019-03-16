@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license = 'MIT'
   s.homepage = 'https://github.com/yangyongzheng/MWPhotoBrowser'
   s.source = { :git => 'https://github.com/yangyongzheng/MWPhotoBrowser.git', :tag => "#{s.version}" }
-  s.summary = '基于MWPhotoBrowser的自定义版本'
+  s.summary = '基于MWPhotoBrowser的修正版'
 
   s.requires_arc = true
   s.platform = :ios, '8.0'

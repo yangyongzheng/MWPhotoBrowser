@@ -1,5 +1,5 @@
 # MWPhotoBrowser
-基于 `MWPhotoBrowser` 的修订版。
+基于 `MWPhotoBrowser` 的修正版。
 
 pod方法：
 
