@@ -29,7 +29,6 @@
     browser.displayActionButton = NO;
     [browser setCurrentPhotoIndex:3];
     [self.navigationController pushViewController:browser animated:YES];
-    browser.navigationController.navigationBar.titleTextAttributes = @{@"UITextAttributeTextColor":[UIColor whiteColor]};
 }
 
 - (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
