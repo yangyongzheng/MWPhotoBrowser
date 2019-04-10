@@ -4,6 +4,6 @@
 pod方法：
 
 ```ruby
-pod 'MWPhotoBrowser', :git => 'https://raw.githubusercontent.com/yangyongzheng/MWPhotoBrowser/master/MWPhotoBrowser.podspec'
+pod 'MWPhotoBrowser', :podspec => 'https://raw.githubusercontent.com/yangyongzheng/MWPhotoBrowser/master/MWPhotoBrowser.podspec'
 ```
 
