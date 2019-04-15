@@ -19,7 +19,7 @@
     UIImageView *_imageView;
     UIImageView *_videoIndicator;
     UIImageView *_loadingError;
-	DACircularProgressView *_loadingIndicator;
+    DACircularProgressView *_loadingIndicator;
     UIButton *_selectedButton;
     
 }
@@ -30,7 +30,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-
+        
         // Grey background
         self.backgroundColor = [UIColor colorWithWhite:0.12 alpha:1];
         
@@ -61,13 +61,13 @@
         _selectedButton.hidden = YES;
         _selectedButton.frame = CGRectMake(0, 0, 44, 44);
         [self addSubview:_selectedButton];
-    
-		// Loading indicator
-		_loadingIndicator = [[DACircularProgressView alloc] initWithFrame:CGRectMake(0, 0, 40.0f, 40.0f)];
+        
+        // Loading indicator
+        _loadingIndicator = [[DACircularProgressView alloc] initWithFrame:CGRectMake(0, 0, 40.0f, 40.0f)];
         _loadingIndicator.userInteractionEnabled = NO;
         _loadingIndicator.thicknessRatio = 0.1;
         _loadingIndicator.roundedCorners = NO;
-		[self addSubview:_loadingIndicator];
+        [self addSubview:_loadingIndicator];
         
         // Listen for photo loading notifications
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -224,7 +224,7 @@
         NSDictionary *dict = [notification object];
         id <MWPhoto> photoWithProgress = [dict objectForKey:@"photo"];
         if (photoWithProgress == _photo) {
-//            NSLog(@"%f", [[dict valueForKey:@"progress"] floatValue]);
+            //            NSLog(@"%f", [[dict valueForKey:@"progress"] floatValue]);
             float progress = [[dict valueForKey:@"progress"] floatValue];
             _loadingIndicator.progress = MAX(MIN(1, progress), 0);
         }
