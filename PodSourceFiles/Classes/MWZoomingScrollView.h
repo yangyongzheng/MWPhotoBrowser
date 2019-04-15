@@ -14,7 +14,7 @@
 @class MWPhotoBrowser, MWPhoto, MWCaptionView;
 
 @interface MWZoomingScrollView : UIScrollView <UIScrollViewDelegate, MWTapDetectingImageViewDelegate, MWTapDetectingViewDelegate> {
-
+    
 }
 
 @property () NSUInteger index;
