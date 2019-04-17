@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'MWPhotoBrowser'
-  s.version = '2.1.4'
+  s.version = '2.1.5'
   s.author = { 'yangyongzheng' => 'youngyongzheng@qq.com' }
   s.license = 'MIT'
   s.homepage = 'https://github.com/yangyongzheng/MWPhotoBrowser'
