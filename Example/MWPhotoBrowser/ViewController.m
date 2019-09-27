@@ -26,7 +26,7 @@
     
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
     browser.alwaysShowControls = YES;
-    browser.displayActionButton = NO;
+    browser.displayActionButton = YES;
     [browser setCurrentPhotoIndex:3];
     [self.navigationController pushViewController:browser animated:YES];
 }
