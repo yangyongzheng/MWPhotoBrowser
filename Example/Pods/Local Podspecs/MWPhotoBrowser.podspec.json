@@ -1,6 +1,6 @@
 {
   "name": "MWPhotoBrowser",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "authors": {
     "yangyongzheng": "youngyongzheng@qq.com"
   },
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/yangyongzheng/MWPhotoBrowser",
   "source": {
     "git": "https://github.com/yangyongzheng/MWPhotoBrowser.git",
-    "tag": "2.1.5"
+    "tag": "2.1.6"
   },
   "summary": "基于MWPhotoBrowser的修正版",
   "requires_arc": true,
@@ -33,7 +33,7 @@
       "~> 2.3"
     ],
     "SDWebImage": [
-      "~> 5.1.1"
+      "~> 5.2.3"
     ]
   }
 }
