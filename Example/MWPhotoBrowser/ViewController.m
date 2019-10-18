@@ -28,6 +28,7 @@
     browser.alwaysShowControls = YES;
     browser.displayActionButton = YES;
     [browser setCurrentPhotoIndex:3];
+    browser.displayDelete = YES;
     [self.navigationController pushViewController:browser animated:YES];
 }
 
@@ -38,6 +39,12 @@
 - (id<MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
     MWPhoto *photo = [MWPhoto photoWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552540354720&di=422394b2e26e8587177a5da318cc9244&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fe61190ef76c6a7ef7d58560df3faaf51f3de669b.jpg"]];
     return photo;
+}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser
+      editPhotoIndex:(NSUInteger)index
+          completion:(void(^)(void))completion {
+    
 }
 
 @end

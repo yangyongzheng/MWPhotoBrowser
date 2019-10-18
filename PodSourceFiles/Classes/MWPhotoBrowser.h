@@ -43,6 +43,9 @@
 - (void)photoBrowserDidFinishModalPresentation:(MWPhotoBrowser *)photoBrowser;
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser deletePhotoAtIndex:(NSUInteger)index;
 - (void)photoBrowser:(MWPhotoBrowser *)photoBrowser setMainImgAtIndex:(NSUInteger)index;
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser
+      editPhotoIndex:(NSUInteger)index
+          completion:(void(^)(void))completion;
 
 @end
 
