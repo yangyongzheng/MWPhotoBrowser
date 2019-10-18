@@ -20,8 +20,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
 @interface MWPhotoBrowser ()
 @property (nonatomic) NSInteger mainImgIndex;
-@property (strong, nonatomic) UIButton *setMainImgButton;
-
 @end
 
 @implementation MWPhotoBrowser
@@ -439,17 +437,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 #pragma mark - Nav Bar Appearance
 
 - (void)setRightBarItems {
-    MWPhoto *photo = [self photoAtIndex:_currentPageIndex];
-    if (self.displayDelete && (!photo.isVideo && self.displaySetMainImg)) {
-        UIBarButtonItem *trashItem = [self trashItem];
-        UIBarButtonItem *setMainImgItem = [self setMainImgItem];
-        self.navigationItem.rightBarButtonItems = @[trashItem, setMainImgItem];
-    } else if (self.displayDelete) {
-        self.navigationItem.rightBarButtonItems = nil;
-        self.navigationItem.rightBarButtonItem = [self trashItem];
-    } else if (!photo.isVideo && self.displaySetMainImg) {
-        self.navigationItem.rightBarButtonItems = nil;
-        self.navigationItem.rightBarButtonItem = [self setMainImgItem];
+    if (self.displayDelete) {
+        self.navigationItem.rightBarButtonItem = [self settingItem];
     }
 }
 
@@ -488,17 +477,21 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return trashItem;
 }
 
-- (UIBarButtonItem *)setMainImgItem {
-    self.setMainImgButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.setMainImgButton setTitle:@"设为主图" forState:UIControlStateNormal];
-    self.setMainImgButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    [self.setMainImgButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.setMainImgButton setBackgroundColor:[UIColor colorWithRed:80/255.0 green:167/255.0 blue:29/255.0 alpha:1]];
-    self.setMainImgButton.layer.cornerRadius = 1.5;
-    self.setMainImgButton.bounds = CGRectMake(0, 0, 65, 20);
-    [self.setMainImgButton addTarget:self action:@selector(setMainImg) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *setMainImgItem = [[UIBarButtonItem alloc] initWithCustomView:self.setMainImgButton];
-    return setMainImgItem;
+- (UIBarButtonItem *)settingItem {
+    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    settingButton.adjustsImageWhenHighlighted = NO;
+    settingButton.adjustsImageWhenDisabled = NO;
+    settingButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [settingButton setTitleColor:[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0] forState:UIControlStateNormal];
+    [settingButton setTitle:@" 设置" forState:UIControlStateNormal];
+    UIImage *iconImage = [UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/icon_setting_16x15@3x"
+                                                ofType:@"png"
+                                              inBundle:[NSBundle bundleForClass:[self class]]];
+    [settingButton setImage:iconImage forState:UIControlStateNormal];
+    [settingButton addTarget:self action:@selector(settingPhoto) forControlEvents:UIControlEventTouchUpInside];
+    [settingButton sizeToFit];
+    UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithCustomView:settingButton];
+    return settingItem;
 }
 
 - (void)back
@@ -545,17 +538,17 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     [self presentViewController:ac animated:YES completion:nil];
 }
 
-- (void)setMainImg
-{
-    if ([self.delegate respondsToSelector:@selector(photoBrowser:setMainImgAtIndex:)]) {
-        [self.delegate photoBrowser:self setMainImgAtIndex:_currentPageIndex];
+- (void)settingPhoto {
+    if ([self.delegate respondsToSelector:@selector(photoBrowser:editPhotoIndex:completion:)]) {
+        [self.delegate photoBrowser:self
+                     editPhotoIndex:self.currentIndex
+                         completion:^(void) {
+            [self reloadData];
+            if (!_photos.count) {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }];
     }
-    self.progressHUD.mode = MBProgressHUDModeText;
-    self.progressHUD.label.text = @"设置主图成功";
-    [self.progressHUD showAnimated:YES];
-    [self.progressHUD hideAnimated:YES afterDelay:2.0f];
-    self.mainImgIndex = _currentPageIndex;
-    [self updateNavigation];
 }
 
 - (void)storePreviousNavBarAppearance {
@@ -1229,21 +1222,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         self.mainImgIndex = [self.dataSource mainImageIndex];
     }
     if (self.mainImgIndex == _currentPageIndex) {
-        [self.setMainImgButton setBackgroundColor:[UIColor clearColor]];
-        [self.setMainImgButton setTitle:@"主图" forState:UIControlStateNormal];
-        [self.setMainImgButton setTitleColor:[UIColor colorWithRed:51/255.0
-                                                             green:51/255.0
-                                                              blue:51/255.0
-                                                             alpha:1]
-                                    forState:UIControlStateNormal];
-        self.setMainImgButton.userInteractionEnabled = NO;
-    } else {
-        [self.setMainImgButton setTitle:@"设为主图" forState:UIControlStateNormal];
-        [self.setMainImgButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.setMainImgButton setBackgroundColor:[UIColor colorWithRed:80/255.0 green:167/255.0 blue:29/255.0 alpha:1]];
-        self.setMainImgButton.userInteractionEnabled = YES;
+        self.title = @"首图";
     }
-    
 }
 
 - (void)jumpToPageAtIndex:(NSUInteger)index animated:(BOOL)animated {
