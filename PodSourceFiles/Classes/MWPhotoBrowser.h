@@ -56,6 +56,7 @@
 @property (nonatomic) BOOL displayNavArrows;
 @property (nonatomic) BOOL displayActionButton;
 @property (nonatomic) BOOL displaySelectionButtons;
+@property (nonatomic) BOOL displaySetting;
 @property (nonatomic) BOOL displayDelete;
 @property (nonatomic) BOOL displaySetMainImg;
 @property (nonatomic) BOOL alwaysShowControls;

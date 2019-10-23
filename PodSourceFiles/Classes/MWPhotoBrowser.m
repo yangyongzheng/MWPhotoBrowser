@@ -437,8 +437,12 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 #pragma mark - Nav Bar Appearance
 
 - (void)setRightBarItems {
-    if (self.displayDelete) {
+    if (self.displaySetting) {
+        self.navigationItem.rightBarButtonItems = nil;
         self.navigationItem.rightBarButtonItem = [self settingItem];
+    } else if (self.displayDelete) {
+        self.navigationItem.rightBarButtonItems = nil;
+        self.navigationItem.rightBarButtonItem = [self trashItem];
     }
 }
 
@@ -1221,7 +1225,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     if ([self.dataSource respondsToSelector:@selector(mainImageIndex)]) {
         self.mainImgIndex = [self.dataSource mainImageIndex];
     }
-    if (self.mainImgIndex == _currentPageIndex) {
+    if (self.mainImgIndex == _currentPageIndex && self.displaySetMainImg) {
         self.title = @"首图";
     }
 }
