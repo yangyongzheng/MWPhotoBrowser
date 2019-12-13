@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'MWPhotoBrowser'
-  s.version = '2.1.8'
+  s.version = '2.1.9'
   s.author = { 'yangyongzheng' => 'youngyongzheng@qq.com' }
   s.license = 'MIT'
   s.homepage = 'https://github.com/yangyongzheng/MWPhotoBrowser'
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'MBProgressHUD', '~> 1.1'
   s.dependency 'DACircularProgress', '~> 2.3'
-  s.dependency 'SDWebImage', '~> 5.2'
+  s.dependency 'SDWebImage', '~> 5.3.3'
 
 end
