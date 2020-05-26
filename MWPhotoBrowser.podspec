@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'MWPhotoBrowser'
-  s.version = '2.1.9'
+  s.version = '2.2.0'
   s.author = { 'yangyongzheng' => 'youngyongzheng@qq.com' }
   s.license = 'MIT'
   s.homepage = 'https://github.com/yangyongzheng/MWPhotoBrowser'
@@ -16,8 +16,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'ImageIO', 'QuartzCore', 'AssetsLibrary', 'MediaPlayer'
   s.weak_frameworks = 'Photos'
 
-  s.dependency 'MBProgressHUD', '~> 1.1'
+  s.dependency 'MBProgressHUD', '~> 1.2'
   s.dependency 'DACircularProgress', '~> 2.3'
-  s.dependency 'SDWebImage', '~> 5.3.3'
-
+  s.dependency 'SDWebImage', '~> 5.8.0'
 end

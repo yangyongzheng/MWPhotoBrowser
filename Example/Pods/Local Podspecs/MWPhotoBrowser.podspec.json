@@ -1,6 +1,6 @@
 {
   "name": "MWPhotoBrowser",
-  "version": "2.1.6",
+  "version": "2.2.0",
   "authors": {
     "yangyongzheng": "youngyongzheng@qq.com"
   },
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/yangyongzheng/MWPhotoBrowser",
   "source": {
     "git": "https://github.com/yangyongzheng/MWPhotoBrowser.git",
-    "tag": "2.1.6"
+    "tag": "2.2.0"
   },
   "summary": "基于MWPhotoBrowser的修正版",
   "requires_arc": true,
@@ -27,13 +27,13 @@
   "weak_frameworks": "Photos",
   "dependencies": {
     "MBProgressHUD": [
-      "~> 1.1"
+      "~> 1.2"
     ],
     "DACircularProgress": [
       "~> 2.3"
     ],
     "SDWebImage": [
-      "~> 5.2.3"
+      "~> 5.8.0"
     ]
   }
 }
